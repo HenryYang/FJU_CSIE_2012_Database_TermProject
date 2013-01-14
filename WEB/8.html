@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html ; charset=utf-8">
+<link rel="stylesheet" href="ui.datepicker.css" type="text/css" media="screen" title="core css file" charset="utf-8" />
+<script src="jquery.js"></script>
+		
+	
+<title>page1</title>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+		
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+    </style>
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.png">
+  
+
+<script src="ui.datepicker.js" type="text/javascript" charset="utf-8"></script>	
+		<script type="text/javascript" charset="utf-8">
+		var currentTime = new Date()
+		var month = currentTime.getMonth() + 1
+	var day = currentTime.getDate()
+	var year = currentTime.getFullYear()
+		
+		
+			jQuery(function($){
+				
+      	$('#train_date').datepicker({minDate: (year + '-' + month + '-' + day) ,firstDay: 1,dateFormat: 'yy-mm-dd', showOn: 'both'});
+        
+
+          				
+			});
+		</script>	
+  
+  
+</head>
+<body><form action="8.php" method="POST">
+    <div class="container" >
+	<form class="form-signin">
+<h2 class="form-signin-heading"><font face="微軟正黑體"><b>高鐵線上訂票系統</font></b></h2>
+<label for="train_date" ><font face="微軟正黑體"><b>乘車日期:</font></b></label>
+<input type="text" id="train_date" name="train_date" maxlength="10" readonly /><br />
+
+
+
+<label for="station_ID"><font face="微軟正黑體"><b>起始站:</font></b></label>
+
+
+<select id="station_ID" name="station_ID">
+        <option value="1" >台北</option>
+        <option value="2" >板橋</option>
+        <option value="3" >桃園</option>
+        <option value="4" >新竹</option>
+        <option value="5" >台中</option>
+        <option value="6" >嘉義</option>
+		<option value="7" >台南</option>
+		<option value="8" >左營</option>
+      </select><br />
+
+<label for="station_ID_end"><font face="微軟正黑體"><b>終點站:</font></b></label>
+
+
+<select id="station_ID_end" name="station_ID_end">
+        <option value="1" >台北</option>
+        <option value="2" >板橋</option>
+        <option value="3" >桃園</option>
+        <option value="4" >新竹</option>
+        <option value="5" >台中</option>
+        <option value="6" >嘉義</option>
+		<option value="7" >台南</option>
+		<option value="8" selected>左營</option>
+      </select><br />
+
+
+<label for="depart_time"><font face="微軟正黑體"><b>預估出發時間:</font></b></label>
+
+
+		<select id="depart_time" name="depart_time">
+        <option value="360" >6:00</option>
+        <option value="420" >7:00</option>
+        <option value="480" >8:00</option>
+        <option value="540" >9:00</option>
+        <option value="600" >10:00</option>
+        <option value="660" >11:00</option>
+		<option value="720" >12:00</option>
+		<option value="780" >13:00</option>
+		<option value="840" >14:00</option>
+		<option value="900" >15:00</option>
+		<option value="960" >16:00</option>
+		<option value="1020" >17:00</option>
+		<option value="1080" >18:00</option>
+		<option value="1140" >19:00</option>
+		<option value="1200" >20:00</option>
+		<option value="1260" >21:00</option>
+		<option value="1320" >22:00</option>
+		<option value="1380" >23:00</option>
+      </select><br />
+
+<input class="btn btn-primary" type="submit"<font face="微軟正黑體"/><b/>
+</form>
+</div>
+ 
+</body>
+</html>
